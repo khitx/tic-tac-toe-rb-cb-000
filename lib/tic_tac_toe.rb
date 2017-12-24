@@ -36,7 +36,6 @@ end
 def turn(board)
   puts "Please enter 1-9:"
   input = gets.strip
-#  input = gets
   index = input_to_index(input)
   if valid_move?(board, index)
     move(board, index, current_player(board))
@@ -65,39 +64,18 @@ def won?(board)
     wci.all? {|i| board[i] == 'X'} ||
     wci.all? {|i| board[i] == 'O'}
   end
-#    winX = wci.all? {|i| board[i] == 'X'}
-#    winO = wci.all? {|i| board[i] == 'O'}
-#    if winX || winO
-#      return wci
-#    end
-#  end
 end
 
 def full?(board)
   !board.any? {|i|(i == "" || i == " ")}
-#  if (board.any? {|i|(i == "" || i == " ")})
-#    return false
-#  else
-#    return true
-#  end
 end
 
 def draw?(board)
   full?(board) && !won?(board)
-#  if won?(board)
-#    return false
-#  elsif full?(board)
-#    return true
-#  else
-#    return false
-#  end
 end
 
 def over?(board)
   won?(board) || draw?(board) || full?(board)
-  #if (won?(board) || draw?(board) || full?(board))
-  #  return true
-  #end
 end
 
 def winner(board)
@@ -111,9 +89,6 @@ end
 
 def play(board)
   while !over?(board) == true
-#    puts("!over: #{!over?(board)}")
-#    puts('1')
-#    puts("turn: #{turn(board)}")
     turn(board)
   end
   if won?(board)
@@ -121,13 +96,4 @@ def play(board)
   elsif draw?(board)
     puts("Cat's Game!")
   end
-#  cnt = 1
-#  while cnt <= 9
-#    turn(board)
-#    cnt += 1
-#  end
 end
-
-#board = [" ", " ", " ", " ", " ", " ", " ", " ", " "]
-#puts("play: #{play(board)}")
-#puts('hello')
