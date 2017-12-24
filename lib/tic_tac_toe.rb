@@ -109,7 +109,8 @@ def winner(board)
 end
 
 def play(board)
-  while puts("!over: #{!over?(board)}")
+  while true
+    puts("!over: #{!over?(board)}")
     puts('1')
     puts("turn: #{turn(board)}")
   end
