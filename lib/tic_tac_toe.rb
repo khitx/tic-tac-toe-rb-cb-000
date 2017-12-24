@@ -110,9 +110,10 @@ end
 
 def play(board)
   while !over?(board) == true
-    puts("!over: #{!over?(board)}")
-    puts('1')
-    puts("turn: #{turn(board)}")
+#    puts("!over: #{!over?(board)}")
+#    puts('1')
+#    puts("turn: #{turn(board)}")
+    turn(board)
   end
   if won?(board)
     puts("Congratulations #{winner(board)}!")
