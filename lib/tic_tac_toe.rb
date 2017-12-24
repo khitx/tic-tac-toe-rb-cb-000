@@ -128,6 +128,6 @@ def play(board)
 #  end
 end
 
-board = [" ", " ", " ", " ", " ", " ", " ", " ", " "]
-puts("play: #{play(board)}")
-puts('hello')
+#board = [" ", " ", " ", " ", " ", " ", " ", " ", " "]
+#puts("play: #{play(board)}")
+#puts('hello')
